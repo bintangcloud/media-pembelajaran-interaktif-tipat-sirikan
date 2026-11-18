@@ -15,12 +15,12 @@ import {
 import { sound } from '../utils/sound';
 
 export default function Games({ setActiveTab, setQuizPassedScore }) {
-  // Game 1: Timeline Puzzle State
+  // Game 1: Timeline Puzzle State (Updated for 4x4)
   const initialPuzzleItems = [
-    { id: 3, text: 'Anyam mendatar selang-seling (Atas - Bawah - Atas)' },
+    { id: 3, text: 'Anyam mendatar selang-seling (Atas - Bawah - Atas - Bawah)' },
     { id: 1, text: 'Belah daun janur & hilangkan lidinya' },
     { id: 4, text: 'Isi beras di Pojok Kiri Atas & kunci rapat' },
-    { id: 2, text: 'Buat 3 kolom lilitan tegak di tangan kiri' }
+    { id: 2, text: 'Buat 4 kolom lilitan tegak di tangan kiri' }
   ];
 
   const [puzzleItems, setPuzzleItems] = useState(initialPuzzleItems);
@@ -65,14 +65,14 @@ export default function Games({ setActiveTab, setQuizPassedScore }) {
     setPuzzleSuccess(false);
   };
 
-  // Game 2: Multiple Choice Quiz State
+  // Game 2: Multiple Choice Quiz State (Updated for 4x4)
   const questions = [
     {
       question: 'Berapa helai janur yang digunakan untuk menganyam Tipat Sirikan?',
       options: [
         'Hanya 1 helai janur utuh yang lentur',
-        '3 helai janur dipotong pendek',
-        '6 helai janur berbeda pohon'
+        '4 helai janur dipotong pendek',
+        '8 helai janur berbeda pohon'
       ],
       correct: 0,
       explanation: 'Benar! Tipat Sirikan unik karena hanya dibuat dari 1 helai janur utuh yang melambangkan kerukunan dan persatuan.'
@@ -90,12 +90,12 @@ export default function Games({ setActiveTab, setQuizPassedScore }) {
     {
       question: 'Berapa banyak kotak anyaman bujur sangkar yang terbentuk pada Tipat Sirikan?',
       options: [
-        '9 kotak (pola Sasak 3x3)',
-        '4 kotak (pola 2x2)',
-        '16 kotak (pola 4x4)'
+        '16 kotak (pola Sasak 4x4 bujur sangkar)',
+        '6 kotak (pola 2x3)',
+        '25 kotak (pola 5x5)'
       ],
       correct: 0,
-      explanation: 'Hebat! Pola anyaman Sasak pada Tipat Sirikan menghasilkan bujur sangkar 3x3 (total 9 kotak).'
+      explanation: 'Hebat! Pola anyaman Sasak pada Tipat Sirikan menghasilkan bujur sangkar 4x4 dengan total 16 kotak anyaman yang rapi.'
     },
     {
       question: 'Dalam adat istiadat Bali, Tipat Sirikan menjadi sajian khas penting pada upacara apa?',
@@ -135,7 +135,6 @@ export default function Games({ setActiveTab, setQuizPassedScore }) {
       sound.playPop();
       setCurrentQIndex(currentQIndex + 1);
     } else {
-      // Calculate score
       let correctCount = 0;
       questions.forEach((q, idx) => {
         if (selectedAnswers[idx] === q.correct) correctCount++;
@@ -180,7 +179,7 @@ export default function Games({ setActiveTab, setQuizPassedScore }) {
             </span>
             <div>
               <h3 className="text-xl font-black text-slate-800">
-                Tantangan 1: Urutkan Langkah Pembuatan
+                Tantangan 1: Urutkan Langkah Pembuatan (Anyaman 4x4)
               </h3>
               <p className="text-xs text-slate-500">
                 Susun 4 kartu di bawah ini dari langkah pertama hingga langkah terakhir!

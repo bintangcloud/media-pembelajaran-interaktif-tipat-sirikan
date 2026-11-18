@@ -15,7 +15,7 @@ Dikembangkan sebagai bagian dari program kerja **GenBI Mengajar** oleh **GenBI K
 ## ✨ Fitur-Fitur Utama
 
 ### 1. 🧊 Laboratorium 3D Interaktif (Three.js)
-- **Model Prosedural Akurat:** Bantal bujur sangkar dengan anyaman Sasak $3 \times 3$ (9 kotak rapi).
+- **Model Prosedural Akurat:** Bantal bujur sangkar dengan anyaman Sasak $4 \times 4$ (16 kotak rapi).
 - **Anatomi Sudut Sesuai Tradisi:**
   - **Pojok Kiri Atas:** 2 helai sisa janur panjang dan **Celah Pengisian Beras** yang dilengkapi butiran beras 3D putih di dalam rongga.
   - **Pojok Kanan Bawah:** 2 helai sisa janur pendek (ujung pengunci anyaman).
@@ -27,7 +27,7 @@ Dikembangkan sebagai bagian dari program kerja **GenBI Mengajar** oleh **GenBI K
 
 ### 2. 🏛️ Filosofi & Kisah Budaya (Fase A, B & C)
 - **Pilar 1: 1 Helai Janur Utuh:** Mengajarkan kerukunan, persatuan, gotong royong, dan toleransi (Profil Pelajar Pancasila).
-- **Pilar 2: Bujur Sangkar $3 \times 3$:** Keseimbangan ajaran Tri Hita Karana (Tuhan, sesama manusia, dan alam).
+- **Pilar 2: Bujur Sangkar $4 \times 4$:** Keseimbangan ajaran Tri Hita Karana (Tuhan, sesama manusia, dan alam) tercermin dalam 16 kotak anyaman yang harmonis.
 - **Pilar 3: Celah Beras Kiri Atas:** Lambang kemakmuran dan pengisian diri dengan ilmu budi pekerti.
 - **Kisah Upacara Mejauman / Mepamit:** Mengenalkan peran sakral Tipat Sirikan dalam tradisi pernikahan adat Bali sebagai simbol pengikat persaudaraan yang erat.
 
@@ -50,7 +50,7 @@ Dikembangkan sebagai bagian dari program kerja **GenBI Mengajar** oleh **GenBI K
 - Fitur cetak rapi yang **hanya mencetak lembar sertifikat** pada 1 halaman penuh.
 
 ### 6. 📝 Lembar Kerja Peserta Didik (LKPD - A4 Portrait)
-- 3 aktivitas terpadu: Menjodohkan anatomi tipat, lembar mewarnai anyaman $3 \times 3$, dan refleksi budi pekerti.
+- 3 aktivitas terpadu: Menjodohkan anatomi tipat, lembar mewarnai anyaman $4 \times 4$ (16 kotak), dan refleksi budi pekerti.
 - Diformat khusus agar siap dicetak langsung di **Halaman 1** tanpa jeda halaman kosong sebelumnya.
 
 ---

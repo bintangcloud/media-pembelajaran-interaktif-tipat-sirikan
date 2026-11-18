@@ -34,7 +34,7 @@ export default function TipatViewer3D() {
   const [activeHotspot, setActiveHotspot] = useState(null);
   const [tooltipInfo, setTooltipInfo] = useState(null);
 
-  // Hotspots definitions
+  // Hotspots definitions (Updated for 4x4 weave)
   const hotspots = [
     {
       id: 'celah-beras',
@@ -56,15 +56,15 @@ export default function TipatViewer3D() {
       id: 'ujung-pendek',
       title: 'Ujung Janur (Pengunci)',
       corner: 'Pojok Kanan Bawah',
-      desc: 'Dua ujung janur yang lebih pendek keluar di pojok kanan bawah setelah mengunci seluruh anyaman silang 3x3 agar tidak buyar.',
+      desc: 'Dua ujung janur yang lebih pendek keluar di pojok kanan bawah setelah mengunci seluruh anyaman silang 4x4 agar tidak buyar.',
       pos: [1.85, -1.85, -0.1],
       badgeColor: 'bg-teal-600 text-white',
     },
     {
       id: 'anyaman-sasak',
-      title: 'Anyaman Bujur Sangkar 3x3',
+      title: 'Anyaman Bujur Sangkar 4x4 (16 Kotak)',
       corner: 'Tengah Badan Tipat',
-      desc: 'Anyaman Sasak berpola selang-seling (atas-bawah) membentuk 9 kotak bujur sangkar yang rapat, kokoh, dan rapi.',
+      desc: 'Anyaman Sasak berpola selang-seling (atas-bawah) membentuk 16 kotak (4 baris x 4 kolom) bujur sangkar yang rapat, kokoh, dan rapi.',
       pos: [0, 0, 0.72],
       badgeColor: 'bg-indigo-600 text-white',
     },
@@ -181,9 +181,8 @@ export default function TipatViewer3D() {
     dirLight2.position.set(-6, -4, -4);
     scene.add(dirLight2);
 
-    // 6. Build 3D Tipat Sirikan Group
+    // 6. Build 3D Tipat Sirikan Group (Upright 4x4 square)
     const tipatGroup = new THREE.Group();
-    // Keep upright square orientation (Z = 0)
     tipatGroup.rotation.z = 0;
     tipatGroupRef.current = tipatGroup;
     scene.add(tipatGroup);
@@ -282,10 +281,10 @@ export default function TipatViewer3D() {
       for (let i = 0; i < pos.count; i++) {
         const vx = pos.getX(i);
         const vy = pos.getY(i);
-        const distCenter = 1.0 - Math.min(1.0, Math.sqrt(vx * vx + vy * vy) / 2.2);
+        const distCenter = 1.0 - Math.min(1.0, Math.sqrt(vx * vx + vy * vy) / 2.3);
         const vz = pos.getZ(i);
-        const wave = over ? Math.sin(vx * 2.0) * 0.08 : -Math.sin(vy * 2.0) * 0.08;
-        pos.setZ(i, vz + wave + (z > 0 ? 1 : -1) * distCenter * 0.45);
+        const wave = over ? Math.sin(vx * 2.2) * 0.07 : -Math.sin(vy * 2.2) * 0.07;
+        pos.setZ(i, vz + wave + (z > 0 ? 1 : -1) * distCenter * 0.46);
       }
       geom.computeVertexNormals();
 
@@ -302,13 +301,17 @@ export default function TipatViewer3D() {
       return mesh;
     };
 
-    // 3x3 Grid Coordinates
-    const coords = [-1.15, 0, 1.15];
-    const quadSize = 1.12;
+    // ==========================================
+    // 4x4 Grid Coordinates (16 Kotak Anyaman Sasak)
+    // 4 positions: -1.35, -0.45, 0.45, 1.35
+    // Quad size: ~0.92
+    // ==========================================
+    const coords4 = [-1.35, -0.45, 0.45, 1.35];
+    const quadSize = 0.92;
 
-    // Front Face Anyaman 3x3
-    coords.forEach((rowY, rIdx) => {
-      coords.forEach((colX, cIdx) => {
+    // Front Face Anyaman 4x4 (16 Kotak)
+    coords4.forEach((rowY, rIdx) => {
+      coords4.forEach((colX, cIdx) => {
         const isOver = (rIdx + cIdx) % 2 === 0;
         const frontZ = 0.52 + (isOver ? 0.08 : -0.08);
         const expOffset = {
@@ -320,9 +323,9 @@ export default function TipatViewer3D() {
       });
     });
 
-    // Back Face Anyaman 3x3
-    coords.forEach((rowY, rIdx) => {
-      coords.forEach((colX, cIdx) => {
+    // Back Face Anyaman 4x4 (16 Kotak)
+    coords4.forEach((rowY, rIdx) => {
+      coords4.forEach((colX, cIdx) => {
         const isOver = (rIdx + cIdx) % 2 === 1;
         const backZ = -0.52 - (isOver ? 0.08 : -0.08);
         const expOffset = {
@@ -334,33 +337,32 @@ export default function TipatViewer3D() {
       });
     });
 
-    // Four Side Border Walls (to seal the pillow)
-    const wallGeomH = new THREE.BoxGeometry(3.6, 0.28, 0.9, 12, 2, 4);
-    const wallGeomV = new THREE.BoxGeometry(0.28, 3.6, 0.9, 2, 12, 4);
+    // Four Side Border Walls (to seal the 4x4 pillow)
+    const wallGeomH = new THREE.BoxGeometry(3.68, 0.28, 0.9, 12, 2, 4);
+    const wallGeomV = new THREE.BoxGeometry(0.28, 3.68, 0.9, 2, 12, 4);
 
     const topWall = new THREE.Mesh(wallGeomH, leafMat);
-    topWall.position.set(0, 1.76, 0);
+    topWall.position.set(0, 1.80, 0);
     tipatGroup.add(topWall);
 
     const bottomWall = new THREE.Mesh(wallGeomH, leafMat);
-    bottomWall.position.set(0, -1.76, 0);
+    bottomWall.position.set(0, -1.80, 0);
     tipatGroup.add(bottomWall);
 
     const leftWall = new THREE.Mesh(wallGeomV, leafMat);
-    leftWall.position.set(-1.76, 0, 0);
+    leftWall.position.set(-1.80, 0, 0);
     tipatGroup.add(leftWall);
 
     const rightWall = new THREE.Mesh(wallGeomV, leafMat);
-    rightWall.position.set(1.76, 0, 0);
+    rightWall.position.set(1.80, 0, 0);
     tipatGroup.add(rightWall);
 
     // ==========================================
-    // CORNER TAILS (SISA JANUR) ACCORDING TO USER:
-    // 1. POJOK KIRI ATAS: SISA JANUR PANJANG (2 strands) & CELAH PENGISIAN BERAS
-    // 2. POJOK KANAN BAWAH: SISA JANUR PENDEK (2 strands)
+    // CORNER TAILS (SISA JANUR):
+    // 1. POJOK KIRI ATAS: SISA JANUR PANJANG & CELAH PENGISIAN BERAS
+    // 2. POJOK KANAN BAWAH: SISA JANUR PENDEK
     // ==========================================
 
-    // Helper: Curving ribbon curve
     const createCurvingTail = (points, width) => {
       const curve = new THREE.CatmullRomCurve3(points);
       const geom = new THREE.TubeGeometry(curve, 32, width, 8, false);
@@ -370,36 +372,36 @@ export default function TipatViewer3D() {
       return mesh;
     };
 
-    // Sisa Janur Panjang at POJOK KIRI ATAS (-1.75, +1.75)
+    // Sisa Janur Panjang at POJOK KIRI ATAS (-1.8, +1.8)
     createCurvingTail([
-      new THREE.Vector3(-1.72, 1.72, 0.25),
-      new THREE.Vector3(-2.15, 2.25, 0.35),
-      new THREE.Vector3(-2.55, 3.10, 0.45),
-      new THREE.Vector3(-2.85, 3.85, 0.25),
-      new THREE.Vector3(-3.10, 4.35, -0.15)
+      new THREE.Vector3(-1.75, 1.75, 0.25),
+      new THREE.Vector3(-2.20, 2.30, 0.35),
+      new THREE.Vector3(-2.60, 3.15, 0.45),
+      new THREE.Vector3(-2.90, 3.90, 0.25),
+      new THREE.Vector3(-3.15, 4.40, -0.15)
     ], 0.11);
 
     createCurvingTail([
-      new THREE.Vector3(-1.75, 1.68, -0.15),
-      new THREE.Vector3(-2.30, 2.10, -0.05),
-      new THREE.Vector3(-2.95, 2.65, 0.25),
-      new THREE.Vector3(-3.45, 3.20, 0.15),
-      new THREE.Vector3(-3.85, 3.55, -0.10)
+      new THREE.Vector3(-1.78, 1.70, -0.15),
+      new THREE.Vector3(-2.35, 2.15, -0.05),
+      new THREE.Vector3(-3.00, 2.70, 0.25),
+      new THREE.Vector3(-3.50, 3.25, 0.15),
+      new THREE.Vector3(-3.90, 3.60, -0.10)
     ], 0.095);
 
-    // Sisa Janur Pendek at POJOK KANAN BAWAH (+1.75, -1.75)
+    // Sisa Janur Pendek at POJOK KANAN BAWAH (+1.8, -1.8)
     createCurvingTail([
-      new THREE.Vector3(1.72, -1.72, 0.15),
-      new THREE.Vector3(2.10, -2.15, 0.20),
-      new THREE.Vector3(2.55, -2.55, 0.10),
-      new THREE.Vector3(2.95, -2.85, -0.05)
+      new THREE.Vector3(1.75, -1.75, 0.15),
+      new THREE.Vector3(2.15, -2.18, 0.20),
+      new THREE.Vector3(2.60, -2.58, 0.10),
+      new THREE.Vector3(3.00, -2.88, -0.05)
     ], 0.10);
 
     createCurvingTail([
-      new THREE.Vector3(1.68, -1.75, -0.15),
-      new THREE.Vector3(2.05, -2.05, -0.10),
-      new THREE.Vector3(2.40, -2.35, 0.05),
-      new THREE.Vector3(2.65, -2.55, 0.00)
+      new THREE.Vector3(1.70, -1.78, -0.15),
+      new THREE.Vector3(2.10, -2.08, -0.10),
+      new THREE.Vector3(2.45, -2.38, 0.05),
+      new THREE.Vector3(2.70, -2.58, 0.00)
     ], 0.085);
 
     // ==========================================
@@ -418,11 +420,11 @@ export default function TipatViewer3D() {
     riceGeom.scale(1, 1.9, 0.85);
 
     // Visible rice grains nestled in the Pojok Kiri Atas opening
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 20; i++) {
       const grain = new THREE.Mesh(riceGeom, riceMat);
       grain.position.set(
-        -1.58 + (Math.random() * 0.35 - 0.17),
-        1.58 + (Math.random() * 0.35 - 0.17),
+        -1.62 + (Math.random() * 0.35 - 0.17),
+        1.62 + (Math.random() * 0.35 - 0.17),
         0.25 + (Math.random() * 0.3 - 0.15)
       );
       grain.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
@@ -430,11 +432,11 @@ export default function TipatViewer3D() {
     }
 
     // Inside grains (visible in X-Ray / Exploded mode)
-    for (let i = 0; i < 45; i++) {
+    for (let i = 0; i < 55; i++) {
       const grain = new THREE.Mesh(riceGeom, riceMat);
       grain.position.set(
-        (Math.random() * 2.2 - 1.1),
-        (Math.random() * 2.2 - 1.1),
+        (Math.random() * 2.4 - 1.2),
+        (Math.random() * 2.4 - 1.2),
         (Math.random() * 0.6 - 0.3)
       );
       grain.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
@@ -471,13 +473,11 @@ export default function TipatViewer3D() {
       camera.position.set(0, 0, -8.5);
       controls.target.set(0, 0, 0);
     } else if (preset === 'celah-beras') {
-      // Focus closely on POJOK KIRI ATAS (-1.7, 1.7)
       camera.position.set(-2.8, 2.8, 4.2);
       controls.target.set(-1.6, 1.6, 0.3);
       setActiveHotspot('celah-beras');
       setTooltipInfo(hotspots.find(h => h.id === 'celah-beras'));
     } else if (preset === 'sisa-janur') {
-      // Focus closely on POJOK KANAN BAWAH (1.8, -1.8)
       camera.position.set(2.8, -2.8, 3.8);
       controls.target.set(1.7, -1.7, 0);
       setActiveHotspot('ujung-pendek');
@@ -516,11 +516,11 @@ export default function TipatViewer3D() {
               Laboratorium 3D Tipat Sirikan
             </h2>
             <span className="px-3 py-1 text-xs font-bold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-              Sasak 3x3 Interaktif
+              Sasak 4x4 Interaktif (16 Kotak)
             </span>
           </div>
           <p className="text-sm text-slate-500 mt-1">
-            Gunakan mouse atau sentuhan jari untuk memutar, memperbesar (zoom), dan memeriksa detail anyaman.
+            Gunakan mouse atau sentuhan jari untuk memutar, memperbesar (zoom), dan memeriksa detail anyaman bujur sangkar 4x4.
           </p>
         </div>
 
@@ -640,7 +640,7 @@ export default function TipatViewer3D() {
             onClick={() => setCameraPreset('depan')}
             className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-emerald-100 hover:text-emerald-800 text-slate-700 transition-colors"
           >
-            Depan
+            Depan (4x4)
           </button>
           <button
             onClick={() => setCameraPreset('miring')}

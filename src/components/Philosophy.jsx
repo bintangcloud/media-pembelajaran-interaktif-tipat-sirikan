@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   HeartHandshake, 
   Sparkles, 
-  Grid3X3, 
+  Grid2X2, 
   Wheat, 
   BookOpen, 
   Users, 
@@ -21,16 +21,16 @@ export default function Philosophy({ setActiveTab }) {
       icon: HeartHandshake,
       badgeColor: 'bg-rose-100 text-rose-700 border-rose-200',
       iconBg: 'bg-rose-50 text-rose-600',
-      description: 'Meskipun janur disilangkan rumit ke kanan dan kiri, helaian daunnya tetap satu kesatuan utuh. Ini mengajarkan anak-anak sekolah dasar bahwa walau kita berbeda suku, agama, atau hobi, kita tetap satu keluarga Indonesia yang rukun.',
+      description: 'Meskipun janur disilangkan rumit ke kanan dan kiri, helaian daunnya tetap satu kesatuan utuh tanpa terputus. Ini mengajarkan anak-anak sekolah dasar bahwa walau kita berbeda suku, agama, atau hobi, kita tetap satu keluarga Indonesia yang rukun.',
       moral: 'Nilai Profil Pelajar Pancasila: Gotong Royong & Berkebinekaan Global'
     },
     {
-      title: 'Bentuk Bujur Sangkar 3x3',
-      subtitle: 'Keseimbangan Tri Hita Karana',
-      icon: Grid3X3,
+      title: 'Bentuk Bujur Sangkar 4x4',
+      subtitle: '16 Kotak Keseimbangan Hidup',
+      icon: Grid2X2,
       badgeColor: 'bg-emerald-100 text-emerald-700 border-emerald-200',
       iconBg: 'bg-emerald-50 text-emerald-600',
-      description: 'Bentuk kotak bantal simetris dengan 9 anyaman Sasak mencerminkan keseimbangan hidup dalam ajaran Tri Hita Karana di Bali: hubungan damai dengan Tuhan (Parahyangan), sesama teman (Pawongan), dan alam sekitar (Palemahan).',
+      description: 'Bentuk kotak bantal simetris dengan 16 kotak anyaman Sasak (4 baris x 4 kolom) mencerminkan keseimbangan hidup dan harmoni 4 penjuru. Nilai Tri Hita Karana terjalin erat: hubungan damai dengan Tuhan (Parahyangan), sesama teman (Pawongan), dan alam sekitar (Palemahan).',
       moral: 'Keseimbangan Ciptaan: Berbakti, Bersahabat & Menjaga Lingkungan'
     },
     {
@@ -56,7 +56,7 @@ export default function Philosophy({ setActiveTab }) {
           Filosofi & Kisah Budaya Tipat Sirikan
         </h2>
         <p className="text-sm text-slate-600 leading-relaxed font-medium">
-          Di balik anyamannya yang indah, Tipat Sirikan menyimpan nilai luhur kehidupan yang sangat penting untuk dipelajari oleh siswa-siswi SD.
+          Di balik anyaman 4x4 yang indah, Tipat Sirikan menyimpan nilai luhur kehidupan yang sangat penting untuk dipelajari oleh siswa-siswi SD.
         </p>
       </div>
 
@@ -121,7 +121,7 @@ export default function Philosophy({ setActiveTab }) {
           </p>
 
           <p className="text-xs sm:text-sm text-amber-50 leading-relaxed">
-            Tipat Sirikan yang dianyam rapat menjadi simbol bahwa kedua keluarga besar kini telah diikat menjadi satu kesatuan yang kokoh, manis, dan harmonis. Tak ada lagi perselisihan, melainkan saling mendukung dalam kebaikan.
+            Tipat Sirikan dengan 16 kotak anyaman rapat menjadi simbol bahwa kedua keluarga besar kini telah diikat menjadi satu kesatuan yang kokoh, manis, dan harmonis. Tak ada lagi perselisihan, melainkan saling mendukung dalam kebaikan.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-3">

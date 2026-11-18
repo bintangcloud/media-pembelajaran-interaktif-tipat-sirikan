@@ -327,7 +327,7 @@ export default function Certificate({ quizScore }) {
             </p>
 
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-2xl mx-auto font-medium">
-              Telah menunjukkan ketekunan, kemandirian motorik halus, dan keberhasilan dalam memahami filosofi kerukunan 1 helai janur serta menguasai teknik anyaman Sasak 3x3 Tipat Sirikan Tradisi Bali.
+              Telah menunjukkan ketekunan, kemandirian motorik halus, dan keberhasilan dalam memahami filosofi kerukunan 1 helai janur serta menguasai teknik anyaman Sasak 4x4 Tipat Sirikan Tradisi Bali.
             </p>
           </div>
 

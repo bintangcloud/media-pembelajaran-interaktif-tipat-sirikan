@@ -81,17 +81,17 @@ Siswa dibagi ke dalam kelompok kecil (4-5 siswa didampingi 1 kakak fasilitator G
 Membuka menu **"✂️ Cara Membuat"** pada web interaktif:
 
 * **Langkah 1 (Persiapan Janur):**  
-  Kakak fasilitator membantu memotong lidi janur dari tengah ke atas, menyisakan lidi pangkal 5 cm (sepanjang jempol anak).
+  Kakak fasilitator membantu memisahkan daun janur dari lidinya dengan hati-hati hingga tersisa 1 helai daun janur lentur utuh.
 * **Langkah 2 (Gulungan Tangan):**  
-  Tangan kiri membuat 3 gulungan (pangkal ke atas ⬆️). Tangan kanan membuat 3 gulungan berlawanan (pucuk ke bawah ⬇️).
+  Tangan kiri membuat 4 putaran/gulungan tegak (vertikal) membentuk 4 kolom dasar pola anyaman 4x4.
 * **Langkah 3 (Pola Anyaman Pertama):**  
-  Mengajarkan rumus: **ATAS ➡️ BAWAH ➡️ ATAS** (*"Masuk - Keluar - Masuk"*).
-* **Langkah 4 (Pola Anyaman Kedua & Ketiga):**  
-  Helai kedua dibalik: **BAWAH ➡️ ATAS ➡️ BAWAH**. Helai ketiga: **ATAS ➡️ BAWAH ➡️ ATAS**.
-* **Langkah 5 (Mengunci Sudut Runcing):**  
-  Memasukkan sisa pucuk dan pangkal melingkari sudut yang masih longgar.
-* **Langkah 6 (Pengisian Beras & Nyinteng / Menarik Rapat):**  
-  Membuka sedikit celah di **pojok kiri atas (tempat sisa helai janur)** untuk memasukkan beras sebanyak 1/2 sampai 2/3 bagian, lalu menarik perlahan helai daun satu demi satu (*nyinteng*) hingga anyaman kencang, padat, dan mengunci sempurna agar beras tidak tumpah saat direbus.
+  Mengajarkan rumus selang-seling 4 kolom: **ATAS ➡️ BAWAH ➡️ ATAS ➡️ BAWAH**.
+* **Langkah 4 (Selesaikan 4 Baris Anyaman 4x4):**  
+  Melanjutkan baris kedua (*Bawah - Atas - Bawah - Atas*), ketiga, dan keempat hingga terbentuk bujur sangkar 16 kotak (*anyaman Sasak 4x4*).
+* **Langkah 5 (Merapatkan Anyaman 4x4):**  
+  Menarik perlahan helai janur dari sudut ke sudut agar seluruh 16 kotak rapat (*sinteng*) dan simetris.
+* **Langkah 6 (Pengisian Beras & Mengunci):**  
+  Membuka celah di **Pojok Kiri Atas** untuk memasukkan beras sebanyak 1/2 hingga 2/3 bagian, lalu menarik kencang sisa janur hingga terkunci rapat di pojok kanan bawah.
 
 ---
 

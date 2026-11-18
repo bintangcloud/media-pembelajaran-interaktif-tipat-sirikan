@@ -39,75 +39,87 @@ export default function Tutorial({ setActiveTab }) {
     },
     {
       step: 2,
-      title: 'Gulungan 3 Kolom di Tangan Kiri',
-      subtitle: 'Membuat Fondasi 3 Garis Vertikal',
-      desc: 'Lilitkan daun janur pada telapak tangan kiri sebanyak 3 putaran tegak (vertikal). Arahkan pangkal janur ke arah atas. Ketiga lilitan ini menjadi 3 kolom anyaman dasar.',
-      teacherTip: 'Bimbing siswa agar gulungan janur di jari-jari tangan kiri tidak terlalu kencang supaya jari tidak terjepit dan janur mudah disisipkan.',
-      audioText: 'Langkah kedua: Lilitkan daun janur pada jari tangan kirimu sebanyak tiga putaran tegak. Jangan terlalu kencang ya adik-adik.',
+      title: 'Gulungan 4 Kolom di Tangan Kiri',
+      subtitle: 'Membuat Fondasi 4 Garis Vertikal',
+      desc: 'Lilitkan daun janur pada telapak tangan kiri sebanyak 4 putaran tegak (vertikal). Arahkan pangkal janur ke arah atas. Keempat lilitan ini menjadi 4 kolom anyaman dasar untuk membentuk pola 4x4.',
+      teacherTip: 'Bimbing siswa agar 4 gulungan janur di jari-jari tangan kiri tidak terlalu kencang supaya jari tidak terjepit dan janur mudah disisipkan.',
+      audioText: 'Langkah kedua: Lilitkan daun janur pada jari tangan kirimu sebanyak empat putaran tegak. Jangan terlalu kencang ya adik-adik.',
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-md">
           {/* Tangan ilustrasi */}
-          <rect x="50" y="130" width="100" height="40" rx="15" fill="#fed7aa" stroke="#fb923c" strokeWidth="2" />
-          {/* 3 Gulungan Kolom */}
-          <rect x="65" y="40" width="18" height="110" rx="6" fill="#a3e635" stroke="#4d7c0f" strokeWidth="2" />
-          <rect x="91" y="40" width="18" height="110" rx="6" fill="#84cc16" stroke="#4d7c0f" strokeWidth="2" />
-          <rect x="117" y="40" width="18" height="110" rx="6" fill="#a3e635" stroke="#4d7c0f" strokeWidth="2" />
-          <text x="100" y="185" fill="#475569" fontSize="11" fontWeight="bold" textAnchor="middle">3 Kolom Tegak di Tangan Kiri</text>
+          <rect x="40" y="135" width="120" height="40" rx="15" fill="#fed7aa" stroke="#fb923c" strokeWidth="2" />
+          {/* 4 Gulungan Kolom */}
+          <rect x="52" y="38" width="16" height="110" rx="5" fill="#a3e635" stroke="#4d7c0f" strokeWidth="2" />
+          <rect x="74" y="38" width="16" height="110" rx="5" fill="#84cc16" stroke="#4d7c0f" strokeWidth="2" />
+          <rect x="96" y="38" width="16" height="110" rx="5" fill="#a3e635" stroke="#4d7c0f" strokeWidth="2" />
+          <rect x="118" y="38" width="16" height="110" rx="5" fill="#84cc16" stroke="#4d7c0f" strokeWidth="2" />
+          <text x="100" y="188" fill="#475569" fontSize="11" fontWeight="bold" textAnchor="middle">4 Kolom Tegak di Tangan Kiri</text>
         </svg>
       )
     },
     {
       step: 3,
-      title: 'Anyam Baris Pertama (Atas - Bawah - Atas)',
-      subtitle: 'Mulai Menyelipkan Baris Horizontal',
-      desc: 'Ambil bagian janur satu lagi dengan tangan kanan. Selipkan secara mendatar: masukkan ke ATAS kolom ke-1, di BAWAH kolom ke-2, lalu ke ATAS kolom ke-3.',
-      teacherTip: 'Ajak siswa menyanyikan rima: "Atas - Bawah - Atas" secara berulang-ulang agar mudah dihafal oleh siswa Fase A dan B.',
-      audioText: 'Langkah ketiga: Selipkan janur mendatar dengan rumus selang-seling: atas, bawah, lalu atas. Sangat mudah kan?',
+      title: 'Anyam Baris Pertama (Atas - Bawah - Atas - Bawah)',
+      subtitle: 'Mulai Menyelipkan Baris Horizontal Melintasi 4 Kolom',
+      desc: 'Ambil bagian janur satu lagi dengan tangan kanan. Selipkan secara mendatar melewati 4 kolom: masuk ke ATAS kolom ke-1, di BAWAH kolom ke-2, ke ATAS kolom ke-3, dan di BAWAH kolom ke-4.',
+      teacherTip: 'Ajak siswa menyanyikan rima: "Atas - Bawah - Atas - Bawah" secara berulang-ulang agar mudah dihafal oleh siswa Fase A dan B.',
+      audioText: 'Langkah ketiga: Selipkan janur mendatar melintasi empat kolom dengan rumus selang-seling: atas, bawah, atas, bawah.',
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-md">
-          {/* 3 Kolom */}
-          <rect x="60" y="30" width="22" height="140" rx="5" fill="#bef264" opacity="0.8" />
-          <rect x="89" y="30" width="22" height="140" rx="5" fill="#a3e635" opacity="0.8" />
-          <rect x="118" y="30" width="22" height="140" rx="5" fill="#bef264" opacity="0.8" />
-          {/* Baris mendatar selang seling */}
-          <path d="M 30 70 L 60 70 M 82 70 L 89 70 M 111 70 L 170 70" stroke="#ca8a04" strokeWidth="12" strokeLinecap="round" />
-          <text x="100" y="188" fill="#475569" fontSize="11" fontWeight="bold" textAnchor="middle">Pola: Atas - Bawah - Atas</text>
+          {/* 4 Kolom */}
+          <rect x="50" y="30" width="18" height="140" rx="4" fill="#bef264" opacity="0.8" />
+          <rect x="74" y="30" width="18" height="140" rx="4" fill="#a3e635" opacity="0.8" />
+          <rect x="98" y="30" width="18" height="140" rx="4" fill="#bef264" opacity="0.8" />
+          <rect x="122" y="30" width="18" height="140" rx="4" fill="#a3e635" opacity="0.8" />
+          {/* Baris mendatar selang seling melintasi 4 kolom */}
+          <path d="M 25 70 L 50 70 M 68 70 L 74 70 M 92 70 L 98 70 M 116 70 L 175 70" stroke="#ca8a04" strokeWidth="12" strokeLinecap="round" />
+          <text x="100" y="188" fill="#475569" fontSize="10.5" fontWeight="bold" textAnchor="middle">Pola: Atas - Bawah - Atas - Bawah</text>
         </svg>
       )
     },
     {
       step: 4,
-      title: 'Selesaikan Baris 2 & 3 (Kotak 3x3)',
-      subtitle: 'Membentuk Bantal Bujur Sangkar Sempurna',
-      desc: 'Anyamkan baris ke-2 dengan pola kebalikan ("Bawah - Atas - Bawah"), dan baris ke-3 dengan pola semula ("Atas - Bawah - Atas"). Kini pola bujur sangkar 9 kotak (3x3) telah terbentuk sempurna!',
-      teacherTip: 'Perhatikan bahwa dua sudut siku 90 derajat yang rapi kini mulai tampak di pojok kanan atas dan pojok kiri bawah.',
-      audioText: 'Langkah keempat: Anyam baris kedua dan ketiga hingga terbentuk pola sembilan kotak bujur sangkar anyaman Sasak yang rapi.',
+      title: 'Selesaikan 4 Baris (Bujur Sangkar 4x4)',
+      subtitle: 'Membentuk Bantal 16 Kotak Anyaman Sasak',
+      desc: 'Lanjutkan menganyam baris ke-2 (Bawah - Atas - Bawah - Atas), baris ke-3, dan baris ke-4. Kini pola bujur sangkar 16 kotak (4 baris x 4 kolom) telah terbentuk rapi dan presisi!',
+      teacherTip: 'Perhatikan bahwa dua sudut siku 90 derajat yang rapi tampak jelas di pojok kanan atas dan pojok kiri bawah.',
+      audioText: 'Langkah keempat: Anyam hingga baris keempat sehingga terbentuk pola enam belas kotak bujur sangkar anyaman Sasak empat kali empat yang rapi.',
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-md">
-          {/* Badan Tipat 3x3 */}
-          <rect x="45" y="45" width="110" height="110" rx="8" fill="#a3e635" stroke="#4d7c0f" strokeWidth="3" />
-          <line x1="81" y1="45" x2="81" y2="155" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <line x1="118" y1="45" x2="118" y2="155" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <line x1="45" y1="81" x2="155" y2="81" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <line x1="45" y1="118" x2="155" y2="118" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <text x="100" y="185" fill="#475569" fontSize="11" fontWeight="bold" textAnchor="middle">Anyaman Sasak 3x3 Terbentuk</text>
+          {/* Badan Tipat 4x4 (16 kotak) */}
+          <rect x="40" y="40" width="120" height="120" rx="8" fill="#a3e635" stroke="#4d7c0f" strokeWidth="3" />
+          {/* 3 Garis Vertikal */}
+          <line x1="70" y1="40" x2="70" y2="160" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          <line x1="100" y1="40" x2="100" y2="160" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          <line x1="130" y1="40" x2="130" y2="160" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          {/* 3 Garis Horizontal */}
+          <line x1="40" y1="70" x2="160" y2="70" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          <line x1="40" y1="100" x2="160" y2="100" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          <line x1="40" y1="130" x2="160" y2="130" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          <text x="100" y="185" fill="#475569" fontSize="11" fontWeight="bold" textAnchor="middle">16 Kotak Anyaman Sasak 4x4</text>
         </svg>
       )
     },
     {
       step: 5,
-      title: 'Rapatkan & Kencangkan Anyaman',
-      subtitle: 'Kunci Anyaman agar Tidak Bocor',
-      desc: 'Tarik helai janur secara bertahap dari satu sudut ke sudut lainnya. Pastikan anyaman menjadi rapat, kuat, dan tidak ada rongga yang membuat beras tumpah.',
+      title: 'Rapatkan & Kencangkan Anyaman 4x4',
+      subtitle: 'Kunci Seluruh 16 Kotak agar Tidak Bocor',
+      desc: 'Tarik helai janur secara bertahap dari satu sudut ke sudut lainnya. Pastikan seluruh 16 kotak anyaman menjadi rapat, kuat, dan tidak ada rongga yang membuat beras tumpah.',
       teacherTip: 'Ingatkan siswa untuk menarik janur secara perlahan dan sabar agar daun tidak robek di bagian pinggir.',
-      audioText: 'Langkah kelima: Tarik perlahan helai janur dari sudut ke sudut agar anyaman menjadi kencang, padat, dan rapi.',
+      audioText: 'Langkah kelima: Tarik perlahan helai janur dari sudut ke sudut agar anyaman enam belas kotak menjadi kencang, padat, dan rapi.',
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-md">
-          {/* Anyaman Rapat */}
-          <rect x="50" y="50" width="100" height="100" rx="8" fill="#84cc16" stroke="#3f6212" strokeWidth="3" />
+          {/* Anyaman Rapat 4x4 */}
+          <rect x="45" y="45" width="110" height="110" rx="8" fill="#84cc16" stroke="#3f6212" strokeWidth="3" />
+          <line x1="72" y1="45" x2="72" y2="155" stroke="#365314" strokeWidth="1.5" />
+          <line x1="100" y1="45" x2="100" y2="155" stroke="#365314" strokeWidth="1.5" />
+          <line x1="128" y1="45" x2="128" y2="155" stroke="#365314" strokeWidth="1.5" />
+          <line x1="45" y1="72" x2="155" y2="72" stroke="#365314" strokeWidth="1.5" />
+          <line x1="45" y1="100" x2="155" y2="100" stroke="#365314" strokeWidth="1.5" />
+          <line x1="45" y1="128" x2="155" y2="128" stroke="#365314" strokeWidth="1.5" />
           {/* Panah tarik merapatkan */}
-          <path d="M 30 100 L 45 100" stroke="#059669" strokeWidth="4" markerEnd="url(#arrow)" />
-          <path d="M 170 100 L 155 100" stroke="#059669" strokeWidth="4" />
+          <path d="M 25 100 L 40 100" stroke="#059669" strokeWidth="4" />
+          <path d="M 175 100 L 160 100" stroke="#059669" strokeWidth="4" />
           <text x="100" y="185" fill="#475569" fontSize="11" fontWeight="bold" textAnchor="middle">Tarik Perlahan & Rapatkan</text>
         </svg>
       )
@@ -116,31 +128,35 @@ export default function Tutorial({ setActiveTab }) {
       step: 6,
       title: 'Isi Beras lewat Celah Kiri Atas & Kunci!',
       subtitle: 'Sentuhan Terakhir Sebelum Dimasak',
-      desc: 'Buka sedikit celah anyaman di POJOK KIRI ATAS. Masukkan beras yang sudah dicuci sebanyak 1/2 atau 2/3 bagian. Tarik kencang sisa janur hingga lubang tertutup rapat, lalu ikat ujungnya!',
+      desc: 'Buka sedikit celah anyaman di POJOK KIRI ATAS. Masukkan beras yang sudah dicuci sebanyak 1/2 atau 2/3 bagian. Tarik kencang sisa janur hingga lubang tertutup rapat, lalu kunci rapi di Pojok Kanan Bawah!',
       teacherTip: 'Jangan mengisi beras melebihi 2/3 isi ketupat, karena beras akan mengembang saat direbus dalam air mendidih.',
       audioText: 'Langkah keenam: Isi beras lewat celah di pojok kiri atas sebanyak setengah atau dua pertiga penuh, lalu tarik kencang sisa janur untuk menguncinya!',
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-md">
-          {/* Tipat lengkap dengan sisa janur di pojok yang benar */}
+          {/* Tipat 4x4 lengkap dengan sisa janur di pojok yang benar */}
           {/* Sisa Janur Panjang di POJOK KIRI ATAS */}
-          <path d="M 55 55 C 35 30, 20 20, 10 10" fill="none" stroke="#65a30d" strokeWidth="6" strokeLinecap="round" />
-          <path d="M 58 52 C 32 40, 15 35, 5 30" fill="none" stroke="#84cc16" strokeWidth="5" strokeLinecap="round" />
+          <path d="M 50 50 C 32 28, 18 18, 8 10" fill="none" stroke="#65a30d" strokeWidth="6" strokeLinecap="round" />
+          <path d="M 53 47 C 30 36, 14 30, 4 28" fill="none" stroke="#84cc16" strokeWidth="5" strokeLinecap="round" />
           
           {/* Sisa Janur Pendek di POJOK KANAN BAWAH */}
-          <path d="M 145 145 C 165 165, 178 178, 190 190" fill="none" stroke="#65a30d" strokeWidth="5" strokeLinecap="round" />
-          <path d="M 142 148 C 158 170, 168 180, 180 188" fill="none" stroke="#84cc16" strokeWidth="4" strokeLinecap="round" />
+          <path d="M 150 150 C 168 168, 180 180, 192 192" fill="none" stroke="#65a30d" strokeWidth="5" strokeLinecap="round" />
+          <path d="M 147 153 C 160 172, 170 182, 182 190" fill="none" stroke="#84cc16" strokeWidth="4" strokeLinecap="round" />
 
-          {/* Kotak Tipat 3x3 */}
-          <rect x="52" y="52" width="96" height="96" rx="8" fill="#a3e635" stroke="#3f6212" strokeWidth="3" />
-          <line x1="84" y1="52" x2="84" y2="148" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <line x1="116" y1="52" x2="116" y2="148" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <line x1="52" y1="84" x2="148" y2="84" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
-          <line x1="52" y1="116" x2="148" y2="116" stroke="#365314" strokeWidth="2" strokeDasharray="3,3" />
+          {/* Kotak Tipat 4x4 (100x100, 4 quads of 25) */}
+          <rect x="48" y="48" width="104" height="104" rx="8" fill="#a3e635" stroke="#3f6212" strokeWidth="3" />
+          {/* Vertical dividers */}
+          <line x1="74" y1="48" x2="74" y2="152" stroke="#365314" strokeWidth="1.8" strokeDasharray="3,3" />
+          <line x1="100" y1="48" x2="100" y2="152" stroke="#365314" strokeWidth="1.8" strokeDasharray="3,3" />
+          <line x1="126" y1="48" x2="126" y2="152" stroke="#365314" strokeWidth="1.8" strokeDasharray="3,3" />
+          {/* Horizontal dividers */}
+          <line x1="48" y1="74" x2="152" y2="74" stroke="#365314" strokeWidth="1.8" strokeDasharray="3,3" />
+          <line x1="48" y1="100" x2="152" y2="100" stroke="#365314" strokeWidth="1.8" strokeDasharray="3,3" />
+          <line x1="48" y1="126" x2="152" y2="126" stroke="#365314" strokeWidth="1.8" strokeDasharray="3,3" />
 
           {/* Celah Pengisian Beras di Pojok Kiri Atas */}
-          <circle cx="58" cy="58" r="9" fill="#fef08a" stroke="#ca8a04" strokeWidth="2" />
-          <ellipse cx="56" cy="56" rx="2.5" ry="4" fill="#ffffff" transform="rotate(-30 56 56)" />
-          <ellipse cx="61" cy="60" rx="2.5" ry="4" fill="#ffffff" transform="rotate(45 61 60)" />
+          <circle cx="56" cy="56" r="8" fill="#fef08a" stroke="#ca8a04" strokeWidth="2" />
+          <ellipse cx="54" cy="54" rx="2" ry="3.5" fill="#ffffff" transform="rotate(-30 54 54)" />
+          <ellipse cx="58" cy="58" rx="2" ry="3.5" fill="#ffffff" transform="rotate(45 58 58)" />
 
           <text x="100" y="180" fill="#ca8a04" fontSize="11" fontWeight="bold" textAnchor="middle">
             Celah Beras (Pojok Kiri Atas)
@@ -192,11 +208,11 @@ export default function Tutorial({ setActiveTab }) {
               <Scissors className="w-5 h-5" />
             </span>
             <h2 className="text-xl sm:text-2xl font-black text-slate-800">
-              Tutorial Langkah Demi Langkah
+              Tutorial Langkah Demi Langkah (Pola 4x4)
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Panduan 6 langkah praktis menganyam Tipat Sirikan untuk siswa Kelas 1 - 6 SD.
+            Panduan 6 langkah praktis menganyam Tipat Sirikan 16 kotak untuk siswa Kelas 1 - 6 SD.
           </p>
         </div>
 
@@ -228,7 +244,7 @@ export default function Tutorial({ setActiveTab }) {
             {stepData.svg}
           </div>
           <span className="mt-3 text-xs font-bold text-slate-400">
-            Ilustrasi Langkah Ke-{stepData.step} dari 6
+            Ilustrasi Langkah Ke-{stepData.step} dari 6 (Anyaman 4x4)
           </span>
         </div>
 

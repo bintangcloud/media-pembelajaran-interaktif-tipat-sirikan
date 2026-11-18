@@ -5,7 +5,7 @@ import {
   Scissors, 
   Award, 
   Heart, 
-  Grid3X3, 
+  Grid2X2, 
   Wheat, 
   Volume2, 
   ChevronRight,
@@ -17,7 +17,7 @@ import { sound, speakText, stopSpeech } from '../utils/sound';
 export default function Hero({ setActiveTab }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const bliGreeting = "Halo adik-adik hebat kelas 1 sampai 6 SD! Kenalkan, aku Bli Janur! Mari bersama-sama kita belajar menganyam Tipat Sirikan khas Bali. Tipat ini unik karena hanya dibuat dari satu helai janur utuh, dan berasnya dimasukkan lewat celah di pojok kiri atas. Yuk, kita mulai petualangan seru ini!";
+  const bliGreeting = "Halo adik-adik hebat kelas 1 sampai 6 SD! Kenalkan, aku Bli Janur! Mari bersama-sama kita belajar menganyam Tipat Sirikan khas Bali dengan pola anyaman Sasak 4 kali 4 yang menghasilkan 16 kotak rapi. Tipat ini unik karena dibuat dari satu helai janur utuh, dan berasnya dimasukkan lewat celah di pojok kiri atas. Yuk, kita mulai petualangan seru ini!";
 
   const handleSpeak = () => {
     sound.playPop();
@@ -38,10 +38,10 @@ export default function Hero({ setActiveTab }) {
       desc: 'Simbol kerukunan, toleransi, dan persatuan yang tak terputus.',
     },
     {
-      icon: Grid3X3,
+      icon: Grid2X2,
       color: 'bg-emerald-50 text-emerald-600 border-emerald-200',
-      title: 'Anyaman Sasak 3x3',
-      desc: 'Bujur sangkar bantal dengan 9 kotak anyaman yang kokoh dan rapi.',
+      title: 'Anyaman Sasak 4x4',
+      desc: 'Bujur sangkar bantal dengan 16 kotak anyaman yang kokoh dan rapi.',
     },
     {
       icon: Wheat,
@@ -79,7 +79,7 @@ export default function Hero({ setActiveTab }) {
             </h1>
 
             <p className="text-sm sm:text-base text-emerald-50 leading-relaxed font-medium max-w-2xl">
-              Media pembelajaran interaktif berbasis 3D, kuis seru, dan tutorial langkah demi langkah. Kenali kearifan lokal Bali, latih motorik halus tangan, dan pahami filosofi persatuan Tri Hita Karana!
+              Media pembelajaran interaktif berbasis 3D, kuis seru, dan tutorial langkah demi langkah. Kenali kearifan lokal Bali, latih motorik halus tangan, dan pahami filosofi persatuan anyaman 4x4 Tri Hita Karana!
             </p>
 
             {/* Mascot Greeting Box */}
@@ -103,7 +103,7 @@ export default function Hero({ setActiveTab }) {
                   </button>
                 </div>
                 <p className="text-xs text-emerald-100 mt-1 leading-snug">
-                  "Kenalkan, aku Bli Janur! Yuk kita putar ketupat 3D di bawah ini, atau ikuti 6 langkah mudah membuat Tipat Sirikan!"
+                  "Kenalkan, aku Bli Janur! Yuk kita putar ketupat 4x4 3D di bawah ini, atau ikuti 6 langkah mudah membuat Tipat Sirikan!"
                 </p>
               </div>
             </div>
@@ -123,7 +123,7 @@ export default function Hero({ setActiveTab }) {
                 className="px-5 py-3 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-sm backdrop-blur-md border border-white/20 flex items-center gap-2 transform active:scale-95 transition-all"
               >
                 <Box className="w-4 h-4 text-emerald-200" />
-                Putar Model 3D
+                Putar Model 3D (4x4)
               </button>
 
               <button
@@ -136,41 +136,46 @@ export default function Hero({ setActiveTab }) {
             </div>
           </div>
 
-          {/* Right Visual Badge / Tipat Preview */}
+          {/* Right Visual Badge / Tipat Preview (4x4 Grid) */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-white/10 backdrop-blur-md p-5 border border-white/20 shadow-2xl flex flex-col items-center justify-center text-center group cursor-pointer"
                  onClick={() => { sound.playPop(); setActiveTab('3d'); }}>
               {/* Rotating glowing halo */}
               <div className="absolute inset-4 rounded-2xl bg-gradient-to-tr from-amber-400/20 to-emerald-300/20 animate-spin-slow blur-xl -z-10" />
 
-              {/* Graphic Icon Representation of 3x3 Tipat */}
-              <div className="w-40 h-40 relative flex items-center justify-center">
+              {/* Graphic Icon Representation of 4x4 Tipat */}
+              <div className="w-44 h-44 relative flex items-center justify-center">
                 <svg viewBox="0 0 160 160" className="w-full h-full drop-shadow-xl animate-float">
                   {/* Sisa Janur Panjang at Pojok Kiri Atas */}
-                  <path d="M 45 45 C 30 25, 20 15, 12 8" fill="none" stroke="#dcfce7" strokeWidth="6" strokeLinecap="round" />
-                  <path d="M 48 42 C 28 35, 15 32, 5 30" fill="none" stroke="#bbf7d0" strokeWidth="5" strokeLinecap="round" />
+                  <path d="M 42 42 C 28 22, 18 12, 10 6" fill="none" stroke="#dcfce7" strokeWidth="6" strokeLinecap="round" />
+                  <path d="M 45 39 C 26 32, 14 29, 4 28" fill="none" stroke="#bbf7d0" strokeWidth="5" strokeLinecap="round" />
                   
                   {/* Sisa Janur Pendek at Pojok Kanan Bawah */}
-                  <path d="M 115 115 C 130 130, 142 142, 152 152" fill="none" stroke="#86efac" strokeWidth="5" strokeLinecap="round" />
-                  <path d="M 112 118 C 122 135, 132 146, 144 154" fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" />
+                  <path d="M 118 118 C 132 132, 144 144, 154 154" fill="none" stroke="#86efac" strokeWidth="5" strokeLinecap="round" />
+                  <path d="M 115 121 C 125 137, 134 148, 146 156" fill="none" stroke="#4ade80" strokeWidth="4" strokeLinecap="round" />
 
-                  {/* 3x3 Grid Woven Quad Body */}
-                  <rect x="42" y="42" width="76" height="76" rx="8" fill="#a3e635" stroke="#4d7c0f" strokeWidth="3" />
-                  {/* Grid Lines */}
-                  <line x1="67" y1="42" x2="67" y2="118" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
-                  <line x1="93" y1="42" x2="93" y2="118" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
-                  <line x1="42" y1="67" x2="118" y2="67" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
-                  <line x1="42" y1="93" x2="118" y2="93" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
+                  {/* 4x4 Grid Woven Quad Body (Total width 80, 4 quads of 20px) */}
+                  <rect x="38" y="38" width="84" height="84" rx="8" fill="#a3e635" stroke="#4d7c0f" strokeWidth="3" />
+                  
+                  {/* 3 Vertical Divider Lines -> 4 Columns */}
+                  <line x1="59" y1="38" x2="59" y2="122" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
+                  <line x1="80" y1="38" x2="80" y2="122" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
+                  <line x1="101" y1="38" x2="101" y2="122" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
+
+                  {/* 3 Horizontal Divider Lines -> 4 Rows */}
+                  <line x1="38" y1="59" x2="122" y2="59" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
+                  <line x1="38" y1="80" x2="122" y2="80" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
+                  <line x1="38" y1="101" x2="122" y2="101" stroke="#3f6212" strokeWidth="2" strokeDasharray="3,3" />
 
                   {/* Celah Pengisian Beras at Pojok Kiri Atas with Rice Grains */}
-                  <circle cx="48" cy="48" r="7" fill="#fef08a" stroke="#ca8a04" strokeWidth="2" />
-                  <ellipse cx="46" cy="46" rx="2" ry="4" fill="#ffffff" transform="rotate(-30 46 46)" />
-                  <ellipse cx="50" cy="49" rx="2" ry="4" fill="#ffffff" transform="rotate(45 50 49)" />
+                  <circle cx="46" cy="46" r="7" fill="#fef08a" stroke="#ca8a04" strokeWidth="2" />
+                  <ellipse cx="44" cy="44" rx="2" ry="3.5" fill="#ffffff" transform="rotate(-30 44 44)" />
+                  <ellipse cx="48" cy="47" rx="2" ry="3.5" fill="#ffffff" transform="rotate(45 48 47)" />
                 </svg>
               </div>
 
-              <span className="mt-3 text-xs font-black tracking-wider uppercase text-amber-200 bg-black/20 px-3 py-1 rounded-full border border-white/10">
-                Pojok Kiri Atas = Celah Beras
+              <span className="mt-2 text-xs font-black tracking-wider uppercase text-amber-200 bg-black/20 px-3 py-1 rounded-full border border-white/10">
+                Pola Anyaman 4x4 (16 Kotak)
               </span>
               <p className="text-[11px] text-emerald-100 font-bold mt-1 group-hover:text-white transition-colors">
                 Klik untuk buka Laboratorium 3D →
