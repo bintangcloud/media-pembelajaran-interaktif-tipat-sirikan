@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* When printing certificate: isolate #printable-certificate */
+  body.printing-cert * {
+    visibility: hidden;
+  }
+  body.printing-cert #printable-certificate,
+  body.printing-cert #printable-certificate * {
+    visibility: visible;
+  }
+  body.printing-cert #printable-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* When printing LKPD: isolate #printable-lkpd */
+  body.printing-lkpd * {
+    visibility: hidden;
+  }
+  body.printing-lkpd #printable-lkpd,
+  body.printing-lkpd #printable-lkpd * {
+    visibility: visible;
+  }
+  body.printing-lkpd #printable-lkpd {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide print buttons and no-print UI */
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.04); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
