@@ -10,11 +10,12 @@ import {
   Volume2, 
   VolumeX,
   Palmtree,
-  Printer
+  Printer,
+  Trees
 } from 'lucide-react';
 import { sound } from '../utils/sound';
 
-export default function Navbar({ activeTab, setActiveTab, isSoundOn, setIsSoundOn }) {
+export default function Navbar({ activeTab, setActiveTab, isSoundOn, setIsSoundOn, onSwitchToKlakat }) {
   const tabs = [
     { id: 'beranda', label: 'Beranda', icon: Sparkles, color: 'text-amber-500' },
     { id: 'filosofi', label: 'Filosofi', icon: HeartHandshake, color: 'text-rose-500' },
@@ -93,6 +94,17 @@ export default function Navbar({ activeTab, setActiveTab, isSoundOn, setIsSoundO
 
           {/* Sound & Action Button */}
           <div className="flex items-center gap-2">
+            {onSwitchToKlakat && (
+              <button
+                onClick={onSwitchToKlakat}
+                className="px-3 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all shadow-sm"
+                title="Beralih ke Modul Klakat Sudamala"
+              >
+                <Trees className="w-3.5 h-3.5 text-amber-700" />
+                <span className="hidden sm:inline">Modul Klakat</span>
+              </button>
+            )}
+
             <button
               onClick={toggleSound}
               className={`p-2.5 rounded-xl border text-xs font-bold flex items-center gap-1.5 transition-all ${
@@ -103,7 +115,7 @@ export default function Navbar({ activeTab, setActiveTab, isSoundOn, setIsSoundO
               title={isSoundOn ? 'Matikan Suara Efek' : 'Nyalakan Suara Efek'}
             >
               {isSoundOn ? <Volume2 className="w-5 h-5 text-emerald-600" /> : <VolumeX className="w-5 h-5" />}
-              <span className="hidden sm:inline">{isSoundOn ? 'Suara Aktif' : 'Mute'}</span>
+              <span className="hidden sm:inline">{isSoundOn ? 'Suara' : 'Mute'}</span>
             </button>
           </div>
         </div>

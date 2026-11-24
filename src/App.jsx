@@ -8,20 +8,28 @@ import Games from './components/Games';
 import Certificate from './components/Certificate';
 import LKPD from './components/LKPD';
 import Footer from './components/Footer';
+import KlakatApp from './components/klakat/KlakatApp';
 
 export default function App() {
+  const [activeModule, setActiveModule] = useState('tipat'); // 'tipat' | 'klakat'
   const [activeTab, setActiveTab] = useState('beranda');
   const [isSoundOn, setIsSoundOn] = useState(true);
   const [quizScore, setQuizScore] = useState(100);
 
+  // If active module is Klakat, render KlakatApp directly
+  if (activeModule === 'klakat') {
+    return <KlakatApp onSwitchToTipat={() => setActiveModule('tipat')} />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col justify-between selection:bg-emerald-200 selection:text-emerald-900">
-      {/* Sticky Navigation Bar */}
+      {/* Sticky Navigation Bar with Topic Switcher */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         isSoundOn={isSoundOn}
         setIsSoundOn={setIsSoundOn}
+        onSwitchToKlakat={() => setActiveModule('klakat')}
       />
 
       {/* Main Content Area */}

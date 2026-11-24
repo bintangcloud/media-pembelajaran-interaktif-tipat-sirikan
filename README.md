@@ -1,4 +1,4 @@
-# 🌴 Tipat Sirikan Cilik • Media Pembelajaran Interaktif Budaya Bali
+# 🌴 Media Pembelajaran Interaktif Budaya Bali • GenBI Mengajar
 
 [![React](https://img.shields.io/badge/React-19-61dafb.svg?style=flat-square&logo=react)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38b2ac.svg?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
@@ -6,64 +6,40 @@
 [![Vite](https://img.shields.io/badge/Vite-Bundler-646cff.svg?style=flat-square&logo=vite)](https://vitejs.dev/)
 [![GenBI Mengajar](https://img.shields.io/badge/GenBI_Mengajar-Undiksha-059669.svg?style=flat-square)](https://github.com/bintangcloud/media-pembelajaran-interaktif-tipat-sirikan)
 
-Media pembelajaran berbasis web interaktif 3D yang dirancang khusus untuk siswa Sekolah Dasar (**Kelas 1 - 6 SD / Fase A, B, & C**) dalam mengenal kearifan lokal Bali, melatih motorik halus, dan mempelajari seni menganyam **Tipat Sirikan** beserta nilai luhur filosofinya.
+Media pembelajaran berbasis web interaktif 3D yang dirancang khusus untuk siswa Sekolah Dasar (**Kelas 1 - 6 SD / Fase A, B, & C**) dalam mengenal kearifan lokal Bali, melatih keterampilan motorik halus, dan mempelajari seni menganyam tradisional beserta filosofi luhurnya.
 
-Dikembangkan sebagai bagian dari program kerja **GenBI Mengajar** oleh **GenBI Komisariat Universitas Pendidikan Ganesha (Undiksha)**.
+Dikembangkan sebagai bagian dari program kerja **GenBI Mengajar** oleh **Generasi Baru Indonesia (GenBI) Komisariat Universitas Pendidikan Ganesha (Undiksha)**.
 
 ---
 
-## ✨ Fitur-Fitur Utama
+## 📚 Dua Modul Pembelajaran Interaktif
 
-### 1. 🧊 Laboratorium 3D Interaktif (Three.js)
-- **Model Prosedural Akurat:** Bantal bujur sangkar dengan anyaman Sasak $4 \times 4$ (16 kotak rapi).
-- **Anatomi Sudut Sesuai Tradisi:**
-  - **Pojok Kiri Atas:** 2 helai sisa janur panjang dan **Celah Pengisian Beras** yang dilengkapi butiran beras 3D putih di dalam rongga.
-  - **Pojok Kanan Bawah:** 2 helai sisa janur pendek (ujung pengunci anyaman).
-  - **Pojok Kanan Atas & Kiri Bawah:** Sudut siku $90^\circ$ yang rapi.
-- **Fitur Kontrol:**
-  - Pilihan material: *Busung Muda*, *Slepan Tua*, dan *Janur Kuning*.
-  - Mode tampilan: *Realistis*, *X-Ray* (melihat butiran beras di dalam), *Merekah* (exploded view), dan *Jala* (wireframe).
-  - Rotasi 360°, zoom, pan, fokus kamera instan, dan putar otomatis.
+Aplikasi ini kini memiliki **2 modul lengkap** yang dapat diakses secara fleksibel:
 
-### 2. 🏛️ Filosofi & Kisah Budaya (Fase A, B & C)
-- **Pilar 1: 1 Helai Janur Utuh:** Mengajarkan kerukunan, persatuan, gotong royong, dan toleransi (Profil Pelajar Pancasila).
-- **Pilar 2: Bujur Sangkar $4 \times 4$:** Keseimbangan ajaran Tri Hita Karana (Tuhan, sesama manusia, dan alam) tercermin dalam 16 kotak anyaman yang harmonis.
-- **Pilar 3: Celah Beras Kiri Atas:** Lambang kemakmuran dan pengisian diri dengan ilmu budi pekerti.
-- **Kisah Upacara Mejauman / Mepamit:** Mengenalkan peran sakral Tipat Sirikan dalam tradisi pernikahan adat Bali sebagai simbol pengikat persaudaraan yang erat.
+### 1. 🌴 Modul Tipat Sirikan (Anyaman Janur Sasak $4 \times 4$)
+- **Laboratorium 3D:** Model bantal bujur sangkar dengan anyaman Sasak $4 \times 4$ (16 kotak). Pojok Kiri Atas dilengkapi **Celah Pengisian Beras** (dengan butiran beras 3D) dan 2 helai sisa janur panjang; Pojok Kanan Bawah dengan 2 sisa janur pendek pengunci.
+- **Filosofi Luhur:** Nilai persatuan 1 helai janur yang menyatu (kerukunan dan toleransi) serta kisah tradisi Upacara Mejauman / Mepamit.
+- **Tutorial 6 Langkah:** Panduan menganyam dari membelah janur hingga pengisian beras dan penguncian rapat.
+- **Fitur Lengkap:** Puzzle urutan, kuis 5 soal dengan selebrasi *confetti*, sertifikat kelulusan digital, dan LKPD A4 Portrait siap cetak langsung di Halaman 1.
 
-### 3. ✂️ Tutorial Langkah Demi Langkah (Langkah 1 - 6)
-- Panduan 6 langkah menganyam dengan ilustrasi vektor SVG yang presisi.
-- Dilengkapi **fitur narasi suara interaktif** (*Web Speech API*) dan efek suara audio synthesizer (*Web Audio API*).
-- Dilengkapi catatan panduan khusus bagi **Guru & Pendamping SD**.
-
-### 4. 🎮 Mini Games & Kuis Interaktif
-- **Tantangan 1 (Puzzle Urutan):** Menyusun 4 kartu tahapan pembuatan tipat dari awal hingga akhir.
-- **Tantangan 2 (Kuis Budaya 5 Soal):** Kuis pilihan ganda edukatif dengan skor instan dan selebrasi *confetti*.
-
-### 5. 📜 Sertifikat Kelulusan Digital (A4 Landscape)
-- Tampilan sertifikat berornamen khas Bali dengan segel resmi.
-- Data yang dapat disesuaikan secara dinamis:
-  - Nama Lengkap Siswa, Nama Sekolah, dan Tingkat Kelas.
-  - Nama & Jabatan Pendidik Relawan GenBI.
-  - Nama & Jabatan Mentor Budaya / Pengrajin.
-  - Kota Pengesahan serta Tanggal, Bulan, dan Tahun (dilengkapi tombol *"Pakai Tanggal Hari Ini"*).
-- Fitur cetak rapi yang **hanya mencetak lembar sertifikat** pada 1 halaman penuh.
-
-### 6. 📝 Lembar Kerja Peserta Didik (LKPD - A4 Portrait)
-- 3 aktivitas terpadu: Menjodohkan anatomi tipat, lembar mewarnai anyaman $4 \times 4$ (16 kotak), dan refleksi budi pekerti.
-- Diformat khusus agar siap dicetak langsung di **Halaman 1** tanpa jeda halaman kosong sebelumnya.
+### 2. 🎋 Modul Klakat Sudamala Wadon (Kriya Anyaman Bambu)
+- **Akses Langsung:** Tersedia tombol *switcher* pada navigasi dan berkas tersendiri di `klakat.html`.
+- **Laboratorium 3D:** Model 3D anyaman bilah bambu (*tiing*) dengan **Lubang Segi Delapan (Mata Sudamala Wadon)** di bagian tengah, 4 bilah diagonal di kuadran sudut, serta bingkai luar berujung taji khas Bali.
+- **Filosofi Luhur:** Makna *Sudamala* (penyucian kekotoran hati dan pikiran), simbol *Asta Aiswarya* & *Asta Dala* pada 8 sisi lubang tengah, serta keteladanan pohon bambu (hidup berumpun, lentur, dan rendah hati).
+- **Tutorial 6 Langkah:** Dari *nyebit* dan *nyisip tiing*, membuat bingkai bujur sangkar, kisi-kisi, pemasangan 4 bilah diagonal, hingga memasang tali tengah.
+- **Fitur Lengkap:** Puzzle tahapan bambu, kuis interaktif, sertifikat pengrajin cilik A4 Landscape, dan LKPD A4 Portrait yang siap cetak langsung di Halaman 1.
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-- **Frontend:** React 19, JSX
-- **Styling:** Tailwind CSS v4, Glassmorphism, Print Media Queries
-- **3D Graphics:** Three.js (Procedural geometries, custom leaf textures, OrbitControls)
-- **Icons:** `lucide-react` (vektor SVG ramah anak)
-- **Audio:** Web Audio API Synthesizer (Chime, Pop, Wrong buzz) & Web Speech API (Narasi suara Bli Janur)
+- **Frontend Framework:** React 19, JSX
+- **Styling:** Tailwind CSS v4, Glassmorphism, Print Media Queries (Isolasi Sertifikat & LKPD Halaman 1)
+- **3D Engine:** Three.js (Procedural geometries, custom organic textures, OrbitControls)
+- **Icons:** `lucide-react` (Ikon vektor SVG cerah ramah anak pengganti emoji keyboard)
+- **Audio & Narasi:** Web Audio API Synthesizer (Chime, Pop, Wrong buzz) & Web Speech API (Narasi suara ramah anak)
 - **Effects:** `canvas-confetti`
-- **Build Tool:** Vite 8
+- **Build Tool:** Vite 8 (Multi-page configuration: `index.html` & `klakat.html`)
 
 ---
 
@@ -84,7 +60,9 @@ npm install
 ```bash
 npm run dev
 ```
-Buka browser di alamat: `http://localhost:3000`
+Buka browser:
+- Modul Tipat Sirikan: `http://localhost:3000/`
+- Modul Klakat Sudamala: `http://localhost:3000/klakat.html` (atau klik tombol **"Modul Klakat"** di navbar!)
 
 ### 4. Build untuk Produksi
 ```bash
